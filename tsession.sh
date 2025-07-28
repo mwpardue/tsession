@@ -1,13 +1,13 @@
 #!/bin/bash
 
-header="TMUX Session Manager"
 FMENU=(
   fzf
   --tmux 20%,20%
-  --header="$header"
   --layout=reverse
   --border=bold
   --border=rounded
+  --border-label="TMUX Session Manager"
+  --border-label-pos=center
   --margin=5%
   --multi
   --color 'fg:#ffffff'
