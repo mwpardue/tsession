@@ -3,14 +3,20 @@
 header="TMUX Session Manager"
 FMENU=(
   fzf
-  --tmux 30%,30%
+  --tmux 20%,20%
   --header="$header"
   --layout=reverse
   --border=bold
   --border=rounded
   --margin=5%
   --multi
-  --color=dark
+  --color 'fg:#ffffff'
+  --color 'current-fg:13'
+  --color 'current-bg:-1'
+  --color 'pointer:13'
+  --color 'hl:13'
+  --color 'border:6'
+  --color 'header:6'
   --info=hidden
   --header-first
   --bind change:top
