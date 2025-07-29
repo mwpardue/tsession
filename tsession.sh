@@ -24,7 +24,9 @@ FMENU=(
   --prompt
 )
 
-selected_row=$(tmux list-sessions | awk -F : '{print $1}' | "${FMENU[@]}" "Select session: ")
+current_session=$(tmux display-message -p '#S')
+
+selected_row=$(tmux list-sessions | grep -v attached | awk -F : '{print $1}' | "${FMENU[@]}" "Select session [${current_session}]: ")
 if [[ -n "$selected_row" ]]; then
 
   tmux switch-client -t $selected_row
