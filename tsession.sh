@@ -2,14 +2,13 @@
 
 FMENU=(
   fzf
-  --tmux 20%,20%
+  --tmux 15%,15%
   --layout=reverse
   --border=bold
   --border=rounded
   --border-label="TMUX Session Manager"
   --border-label-pos=center
-  --margin=5%
-  --multi
+  --margin=2%
   --color 'fg:7'
   --color 'current-fg:13'
   --color 'current-bg:-1'
